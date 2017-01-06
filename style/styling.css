@@ -1,0 +1,133 @@
+body{
+  font-family: Arial;
+}
+
+#area {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 10px solid gray;
+}
+
+.buttons{
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons button{
+  height: 50px;
+  width:100px;
+  background-color: green;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.info{
+  margin:0 auto;
+  width: 500px;
+}
+
+.info h1{
+  text-align: center;
+}
+
+.info p{
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#points{
+  float: left;
+}
+
+#lives{
+  float: right;
+}
+
+.scoreboard{
+  height:50px;
+}
+
+.loseText {
+  display:none;
+  position:relative;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+  left: 30%;
+  color: orange;
+}
+
+.loseText h3{
+  margin-left: -10%;
+}
+
+
+.loseText.show{
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  top: 200px;
+  transition: visibility 10s, top 1s, opacity 0.5s, ease-in;
+}
+
+.winText {
+  display:none;
+  position:relative;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+  left: 30%;
+  color: blue;
+}
+
+.winText h3{
+  margin-left: -20%;
+}
+
+.winText.show{
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  top: 200px;
+  transition: visibility 10s, top 1s, opacity 0.5s, ease-in;
+}
+
+
+.ufo {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/ufo.png");
+  background-size: contain;
+}
+
+.flying{
+  animation-name: fly-left;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.destroy{
+  background-image: url("../images/boom.png");
+  transition: background-image 0.5s ease-in-out;
+}
+
+@keyframes fly-left {
+  from {
+    transform: translate(0px,0px);
+  }
+  to {
+    transform: translate(450px,0px);
+  }
+}
